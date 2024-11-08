@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">Home</div>
+        <div class="navbar-right" onclick="toggleRequirements()">What is Strong?</div>
+    </div>
+    
+    <div class="content">
+        <!-- PII Input Section -->
+        <div class="pii-section">
+            <input type="text" id="nameInput" placeholder="Enter your name">
+            <input type="date" id="dobInput" placeholder="Enter your date of birth">
+            <input type="text" id="placeInput" placeholder="Enter your place">
+        </div>
+
+        <!-- Password Input and Feedback Section -->
+        <input type="text" id="passwordInput" placeholder="Enter password here" oninput="checkPasswordStrength()">
+        <div id="feedback"></div>
+    </div>
+
+    <div id="parameters" class="parameters-section">
+        <h2>Password Requirements:</h2>
+        <ul>
+            <li><img src="C:\Users\Akash\Desktop\Projects\CyberSecurity\Password Strength Checker\cloud1.png" class="cloud-icon"> At least 8 characters</li>
+            <li><img src="cloud2.png" class="cloud-icon"> Alphanumeric with no repetition</li>
+            <li><img src="cloud3.png" class="cloud-icon"> Not a common name</li>
+            <li><img src="cloud4.png" class="cloud-icon"> Includes special characters</li>
+            <li><img src="cloud5.png" class="cloud-icon"> No consecutive or repeating numbers like 000 or 123</li>
+        </ul>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
