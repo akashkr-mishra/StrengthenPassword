@@ -1,7 +1,12 @@
 // Toggle Requirements Cloud
 function toggleRequirements() {
-    const requirements = document.getElementById("requirements");
-    requirements.style.display = requirements.style.display === "none" ? "block" : "none";
+    document.getElementById("parameters").style.display = "flex";
+    document.getElementById("understood").style.display = "block";
+}
+
+function understood() {
+    document.getElementById("parameters").style.display = "none";
+    document.getElementById("understood").style.display = "none";
 }
 
 // Function to check if password contains PII

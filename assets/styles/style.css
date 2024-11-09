@@ -74,27 +74,59 @@ html, body {
     padding: 10px;
 }
 
-/* Requirements Cloud Styling */
+.clouds {
+    position: relaive;
+    width: 90vw;
+}
+
+#parameters {
+    position: absolute;
+    display: none;
+    flex-wrap: nowrap;
+    justify-content: center;
+    max-width: 90vw;
+    overflow: hidden;
+    overscroll-behavior-x: none;
+}
+
+.cloud {
+    position: relative;
+    display: inline-block;
+    animation: moveClouds 12s linear infinite;
+    margin-top: -80px;
+}
+
 .cloud-icon {
-    width: 50px;  /* Adjust size as needed */
+    width: 300px;
     height: auto;
-    margin-right: 10px;
-    vertical-align: middle;
 }
 
-.parameters-section li {
-    display: flex;
-    align-items: center;
-    padding: 5px 0;
+.cloud-text {
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-.parameters-section li img {
-    background-color: white; /* White background for cloud */
-    border-radius: 50%;
-    padding: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+.understood {
+    display: none;
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    z-index: 10;
+    margin-top: -32px;
 }
 
-.parameters-section h2 {
-    margin-bottom: 15px;
+@keyframes moveClouds {
+    0% { left: -1400px; }
+    100% { left: 90vw; }
 }
